@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio — Balakrishnan M</title>
-<meta name="description" content="Portfolio of Balakrishnan M., an Electronics and Communication Engineering diploma student building toward a career in astronomy and astrophysics through electronics, programming, data analysis and space-technology projects.">
-<link rel="icon" type="image/png" href="images/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="css/style.css">
-<noscript><style>#welcome{display:none}</style></noscript>
- <script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio — Balakrishnan M</title>
+  <meta name="description"
+    content="Portfolio of Balakrishnan M., an Electronics and Communication Engineering diploma student building toward a career in astronomy and astrophysics through electronics, programming, data analysis and space-technology projects.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <noscript>
+    <style>
+      #welcome {
+        display: none
+      }
+    </style>
+  </noscript>
+  <script>
 try{if(sessionStorage.getItem('welcomeSeen'))document.documentElement.classList.add('welcome-seen')}catch(e){}
-</script> 
-<script src="js/main.js" defer></script>
-    
+</script>
+  <script src="js/main.js" defer></script>
+
 </head>
 
 <body data-page="home">
-  
+
   <div id="welcome">
     <div class="welcome-content">
       <span class="welcome-symbol">✦</span>
@@ -27,438 +35,434 @@ try{if(sessionStorage.getItem('welcomeSeen'))document.documentElement.classList.
       <div class="welcome-loader"></div>
     </div>
   </div>
-  
+
   <canvas id="starfield" aria-hidden="true"></canvas>
 
-<header class="site-header">
-  <nav class="nav" aria-label="Primary">
-    <a href="index.html" class="brand">
-      <span class="brand-mark">&gt;</span> Balakrishnan M
-    </a>
-
-    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
-
-    <ul class="nav-links" id="navlinks">
-      <li><a href="index.html" data-page="home">Home</a></li>
-      <li><a href="about.html" data-page="about">About</a></li>
-      <li><a href="projects.html" data-page="projects">Projects</a></li>
-      <li><a href="internship.html" data-page="internship">Internship</a></li>
-      <li><a href="astronomy.html" data-page="astronomy">Astronomy</a></li>
-      <li><a href="certifications.html" data-page="certifications">Certifications</a></li>
-      <li><a href="achievements.html" data-page="achievements">Achievements</a></li>
-      <li><a href="contact.html" data-page="contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-
-  <!-- HERO -->
-  <section class="hero wrap">
-
-    <div class="hero-content">
-
-      <div class="hero-text">
-
-        <h1>
-          ECE student today.<br>
-          Future <span class="accent">Astronomer</span>.
-        </h1>
-
-        <p class="role-line">
-          Balakrishnan M. — Diploma in Electronics &amp; Communication Engineering,
-          2nd year, Sankar Polytechnic College
-        </p>
-
-        <p class="lede">
-          I am an Electronics and Communication Engineering diploma student with
-          a long-term interest in astronomy, astrophysics and space science.
-          My journey begins with engineering — learning how electronic systems
-          work, how sensors collect information, and how programming can be used
-          to process and understand data.
-        </p>
-
-        <p class="lede">
-          Alongside my ECE studies, I am gradually building a broader scientific
-          foundation in physics, mathematics, programming, astronomy and
-          space technology. I use projects, experiments, independent learning
-          and science communication to connect what I learn in the classroom
-          with real scientific and engineering problems.
-        </p>
-
-        <p class="lede">
-          My ultimate goal is to continue from engineering into higher studies
-          in physics and astrophysics and eventually pursue a career in
-          astronomy. This portfolio documents that process honestly — what I
-          have built, what I am learning, what I have discovered through
-          experimentation, and the areas I still need to explore.
-        </p>
-
-        <div class="btn-row">
-          <a href="projects.html" class="btn btn-primary">
-            Explore My Projects
-          </a>
-
-          <a href="astronomy.html" class="btn btn-outline">
-            My Astronomy Journey
-          </a>
-
-          <a href="resume.html" class="btn btn-outline">
-            View Resume
-          </a>
-        </div>
-
-      </div>
-
-      <!-- PROFILE PHOTO AREA -->
-      <div class="profile-area">
-        <div class="profile-photo-frame">
-          <img
-            src="images/profile.jpg"
-            alt="Portrait of Balakrishnan M."
-            class="profile-photo"
-            width="270"
-            height="270"
-            decoding="async"
-          >
-        </div>
-
-        <p class="profile-caption">
-          Electronics &amp; Communication Engineering Student
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- QUICK ORIENTATION -->
-  <section class="section wrap">
-
-    <div class="section-head">
-      <span class="kicker">01 — how to read this site</span>
-
-      <h2>Evidence, not exaggeration</h2>
-
-      <p class="lede">
-        This portfolio exists because a one-page resume cannot fully represent
-        a technical and scientific learning journey. It is designed to show
-        not only the finished results, but also the process behind them.
-        Everything here is labelled honestly: what I have completed, what I am
-        currently learning, and what remains a future goal.
-      </p>
-    </div>
-
-    <div class="grid grid-3">
-
-      <div class="card">
-        <span class="status status-done">Completed</span>
-
-        <h3>Built &amp; documented</h3>
-
-        <p>
-          Real projects, experiments and coursework I have completed, with
-          attention to the problems encountered, methods used, results
-          obtained and limitations of the work — rather than showing only
-          successful outcomes.
-        </p>
-      </div>
-
-
-      <div class="card">
-        <span class="status status-learning">Currently learning</span>
-
-        <h3>In progress</h3>
-
-        <p>
-          Subjects, tools and scientific concepts that I am actively studying.
-          This includes electronics, programming, physics, mathematics,
-          astronomy and topics such as nuclear astrophysics that help me
-          gradually strengthen my scientific foundation.
-        </p>
-      </div>
-
-
-      <div class="card">
-        <span class="status status-goal">Future goal</span>
-
-        <h3>Where I'm headed</h3>
-
-        <p>
-          Astronomy and astrophysics are my long-term career direction.
-          Becoming an astronomer is a goal I am working toward through
-          education, technical projects, scientific learning and continuous
-          exploration — not a professional title I claim today.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- THE PATH -->
-  <section class="section wrap">
-
-    <div class="section-head">
-      <span class="kicker">02 — the path so far</span>
-
-      <h2>Electronics → Programming → Space → Astronomy</h2>
-
-      <p class="lede">
-        My formal background is in Electronics and Communication Engineering.
-        Rather than viewing engineering and astronomy as separate interests,
-        I see electronics and programming as practical tools that can support
-        scientific exploration. Sensors, embedded systems, computation and
-        data analysis are all connected to the way modern scientific
-        instruments collect, process and interpret information.
-      </p>
-
-      <p class="lede">
-        I am therefore using my ECE foundation as one of the stepping stones
-        toward astronomy and astrophysics. As I progress, I am expanding my
-        knowledge of physics, mathematics, programming and astronomical data
-        analysis so that I can eventually approach astronomy from a stronger
-        interdisciplinary foundation.
-      </p>
-    </div>
-
-
-    <div class="flow">
-      <span>ECE &amp; Electronics</span>
-      <span>Programming</span>
-      <span>Space Technology</span>
-      <span>Astronomy Data Analysis</span>
-      <span class="current">Astrophysics (goal)</span>
-    </div>
-
-    <a href="astronomy.html" class="card-link">
-      Read the full journey →
-    </a>
-
-  </section>
-
-
-  <!-- FEATURED WORK -->
-  <section class="section wrap">
-
-    <div class="section-head">
-      <span class="kicker">03 — selected work</span>
-
-      <h2>A few things I've built</h2>
-
-      <p class="lede">
-        My projects are a way of turning concepts into practical experiments.
-        Some explore electronics and embedded systems, while others focus on
-        astronomy, web development or data analysis. Together, they represent
-        different stages of my technical learning and my growing interest in
-        space science.
-      </p>
-    </div>
-
-
-    <div class="grid grid-3">
-
-      <div class="card">
-
-        <span class="card-meta">
-          Space Technology · Internship
-        </span>
-
-        <h3>Solar Tracking &amp; Receiving System</h3>
-
-        <p>
-          An Arduino-based proof-of-concept exploring sensor-guided receiver
-          alignment. The project uses light sensors and a servo mechanism to
-          investigate how a system can automatically respond to the apparent
-          position of a light source, inspired by the broader concept of
-          Space-Based Solar Power.
-        </p>
-
-        <div class="tags">
-          <span class="tag">Arduino</span>
-          <span class="tag">LDR Sensors</span>
-          <span class="tag">Servo</span>
-        </div>
-
-        <a href="internship.html" class="card-link">
-          View internship page →
-        </a>
-
-      </div>
-
-
-      <div class="card">
-
-        <span class="card-meta">
-          Web Development
-        </span>
-
-        <h3>Celestial Gallery</h3>
-
-        <p>
-          An astronomy web application designed to present curated celestial
-          objects and related information through organised gallery pages.
-          The project combines web-development skills with my interest in
-          astronomy and science communication, creating an accessible way to
-          explore astronomical subjects.
-        </p>
-
-        <div class="tags">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
-        </div>
-
-        <a href="project-celestial-gallery.html" class="card-link">
-          View project →
-        </a>
-
-      </div>
-
-
-      <div class="card">
-
-        <span class="card-meta">
-          Astronomy Data Analysis
-        </span>
-
-        <h3>Virgo Constellation Data Analysis</h3>
-
-        <p>
-          A small astronomy data-analysis project based on a Hubble Space
-          Telescope image of the Virgo region. The project involves creating
-          and examining a dataset from astronomical observations and applying
-          statistical and visual analysis to identify patterns within the
-          collected data.
-        </p>
-
-        <div class="tags">
-          <span class="tag">Excel</span>
-          <span class="tag">Matplotlib</span>
-        </div>
-
-        <a href="project-virgo.html" class="card-link">
-          View project →
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <div class="btn-row">
-      <a href="projects.html" class="btn btn-outline">
-        See all projects
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">&gt;</span> Balakrishnan M
       </a>
-    </div>
 
-  </section>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+
+      <ul class="nav-links" id="navlinks">
+        <li><a href="index.html" data-page="home">Home</a></li>
+        <li><a href="about.html" data-page="about">About</a></li>
+        <li><a href="skills.html" data-page="skills">Skills</a></li>
+        <li><a href="projects.html" data-page="projects">Projects</a></li>
+        <li><a href="internship.html" data-page="internship">Internship</a></li>
+        <li><a href="astronomy.html" data-page="astronomy">Astronomy</a></li>
+        <li><a href="certifications.html" data-page="certifications">Certifications</a></li>
+        <li><a href="achievements.html" data-page="achievements">Achievements</a></li>
+        <li><a href="contact.html" data-page="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero wrap">
+
+      <div class="hero-content">
+
+        <div class="hero-text">
+
+          <h1>
+            ECE student today.<br>
+            Future <span class="accent">Astronomer</span>.
+          </h1>
+
+          <p class="role-line">
+            Balakrishnan M. — Diploma in Electronics &amp; Communication Engineering,
+            2nd year, Sankar Polytechnic College
+          </p>
+
+          <p class="lede">
+            I am an Electronics and Communication Engineering diploma student with
+            a long-term interest in astronomy, astrophysics and space science.
+            My journey begins with engineering — learning how electronic systems
+            work, how sensors collect information, and how programming can be used
+            to process and understand data.
+          </p>
+
+          <p class="lede">
+            Alongside my ECE studies, I am gradually building a broader scientific
+            foundation in physics, mathematics, programming, astronomy and
+            space technology. I use projects, experiments, independent learning
+            and science communication to connect what I learn in the classroom
+            with real scientific and engineering problems.
+          </p>
+
+          <p class="lede">
+            My ultimate goal is to continue from engineering into higher studies
+            in physics and astrophysics and eventually pursue a career in
+            astronomy. This portfolio documents that process honestly — what I
+            have built, what I am learning, what I have discovered through
+            experimentation, and the areas I still need to explore.
+          </p>
+
+          <div class="btn-row">
+            <a href="projects.html" class="btn btn-primary">
+              Explore My Projects
+            </a>
+
+            <a href="astronomy.html" class="btn btn-outline">
+              My Astronomy Journey
+            </a>
+
+            <a href="resume.html" class="btn btn-outline">
+              View Resume
+            </a>
+          </div>
+
+        </div>
+
+        <!-- PROFILE PHOTO AREA -->
+        <div class="profile-area">
+          <div class="profile-photo-frame">
+            <img src="images/profile.jpg" alt="Portrait of Balakrishnan M." class="profile-photo" width="270"
+              height="270" decoding="async">
+          </div>
+
+          <p class="profile-caption">
+            Electronics &amp; Communication Engineering Student
+          </p>
+        </div>
+
+      </div>
+
+    </section>
 
 
-  <!-- SNAPSHOT -->
-  <section class="section wrap">
+    <!-- QUICK ORIENTATION -->
+    <section class="section wrap">
 
-    <div class="section-head">
-      <span class="kicker">04 — quick snapshot</span>
+      <div class="section-head">
+        <span class="kicker">01 — how to read this site</span>
 
-      <h2>What else is on this site</h2>
+        <h2>Evidence, not exaggeration</h2>
 
-      <p class="lede">
-        The rest of this portfolio provides a more detailed view of my
-        development beyond individual projects — including what I am studying,
-        the experiments I conduct, certifications I have completed and the
-        scientific interests that shape my long-term direction.
-      </p>
-    </div>
+        <p class="lede">
+          This portfolio exists because a one-page resume cannot fully represent
+          a technical and scientific learning journey. It is designed to show
+          not only the finished results, but also the process behind them.
+          Everything here is labelled honestly: what I have completed, what I am
+          currently learning, and what remains a future goal.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+
+        <div class="card">
+          <span class="status status-done">Completed</span>
+
+          <h3>Built &amp; documented</h3>
+
+          <p>
+            Real projects, experiments and coursework I have completed, with
+            attention to the problems encountered, methods used, results
+            obtained and limitations of the work — rather than showing only
+            successful outcomes.
+          </p>
+        </div>
 
 
-    <div class="grid grid-3">
+        <div class="card">
+          <span class="status status-learning">Currently learning</span>
 
-      <div class="card">
+          <h3>In progress</h3>
 
-        <h3>Learning log</h3>
+          <p>
+            Subjects, tools and scientific concepts that I am actively studying.
+            This includes electronics, programming, physics, mathematics,
+            astronomy and topics such as nuclear astrophysics that help me
+            gradually strengthen my scientific foundation.
+          </p>
+        </div>
 
-        <p>
-          What I'm studying right now across physics, mathematics, astronomy,
-          electronics and programming, including the concepts I am developing
-          independently alongside my formal ECE education.
+
+        <div class="card">
+          <span class="status status-goal">Future goal</span>
+
+          <h3>Where I'm headed</h3>
+
+          <p>
+            Astronomy and astrophysics are my long-term career direction.
+            Becoming an astronomer is a goal I am working toward through
+            education, technical projects, scientific learning and continuous
+            exploration — not a professional title I claim today.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- THE PATH -->
+    <section class="section wrap">
+
+      <div class="section-head">
+        <span class="kicker">02 — the path so far</span>
+
+        <h2>Electronics → Programming → Space → Astronomy</h2>
+
+        <p class="lede">
+          My formal background is in Electronics and Communication Engineering.
+          Rather than viewing engineering and astronomy as separate interests,
+          I see electronics and programming as practical tools that can support
+          scientific exploration. Sensors, embedded systems, computation and
+          data analysis are all connected to the way modern scientific
+          instruments collect, process and interpret information.
         </p>
 
-        <a href="learning.html" class="card-link">
-          View learning log →
-        </a>
+        <p class="lede">
+          I am therefore using my ECE foundation as one of the stepping stones
+          toward astronomy and astrophysics. As I progress, I am expanding my
+          knowledge of physics, mathematics, programming and astronomical data
+          analysis so that I can eventually approach astronomy from a stronger
+          interdisciplinary foundation.
+        </p>
+      </div>
+
+
+      <div class="flow">
+        <span>ECE &amp; Electronics</span>
+        <span>Programming</span>
+        <span>Space Technology</span>
+        <span>Astronomy Data Analysis</span>
+        <span class="current">Astrophysics (goal)</span>
+      </div>
+
+      <a href="astronomy.html" class="card-link">
+        Read the full journey →
+      </a>
+
+    </section>
+
+
+    <!-- FEATURED WORK -->
+    <section class="section wrap">
+
+      <div class="section-head">
+        <span class="kicker">03 — selected work</span>
+
+        <h2>A few things I've built</h2>
+
+        <p class="lede">
+          My projects are a way of turning concepts into practical experiments.
+          Some explore electronics and embedded systems, while others focus on
+          astronomy, web development or data analysis. Together, they represent
+          different stages of my technical learning and my growing interest in
+          space science.
+        </p>
+      </div>
+
+
+      <div class="grid grid-3">
+
+        <div class="card">
+
+          <span class="card-meta">
+            Space Technology · Internship
+          </span>
+
+          <h3>Solar Tracking &amp; Receiving System</h3>
+
+          <p>
+            An Arduino-based proof-of-concept exploring sensor-guided receiver
+            alignment. The project uses light sensors and a servo mechanism to
+            investigate how a system can automatically respond to the apparent
+            position of a light source, inspired by the broader concept of
+            Space-Based Solar Power.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Arduino</span>
+            <span class="tag">LDR Sensors</span>
+            <span class="tag">Servo</span>
+          </div>
+
+          <a href="internship.html" class="card-link">
+            View internship page →
+          </a>
+
+        </div>
+
+
+        <div class="card">
+
+          <span class="card-meta">
+            Web Development
+          </span>
+
+          <h3>Celestial Gallery</h3>
+
+          <p>
+            An astronomy web application designed to present curated celestial
+            objects and related information through organised gallery pages.
+            The project combines web-development skills with my interest in
+            astronomy and science communication, creating an accessible way to
+            explore astronomical subjects.
+          </p>
+
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+
+          <a href="project-celestial-gallery.html" class="card-link">
+            View project →
+          </a>
+
+        </div>
+
+
+        <div class="card">
+
+          <span class="card-meta">
+            Astronomy Data Analysis
+          </span>
+
+          <h3>Virgo Constellation Data Analysis</h3>
+
+          <p>
+            A small astronomy data-analysis project based on a Hubble Space
+            Telescope image of the Virgo region. The project involves creating
+            and examining a dataset from astronomical observations and applying
+            statistical and visual analysis to identify patterns within the
+            collected data.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Excel</span>
+            <span class="tag">Matplotlib</span>
+          </div>
+
+          <a href="project-virgo.html" class="card-link">
+            View project →
+          </a>
+
+        </div>
 
       </div>
 
 
-
-      <div class="card">
-
-        <h3>Certifications</h3>
-
-        <p>
-          Courses and certifications that support my technical and scientific
-          development, including Nuclear Astrophysics, Python Programming and
-          soft-skills coursework.
-        </p>
-
-        <a href="certifications.html" class="card-link">
-          View certifications →
+      <div class="btn-row">
+        <a href="projects.html" class="btn btn-outline">
+          See all projects
         </a>
+      </div>
+
+    </section>
+
+
+    <!-- SNAPSHOT -->
+    <section class="section wrap">
+
+      <div class="section-head">
+        <span class="kicker">04 — quick snapshot</span>
+
+        <h2>What else is on this site</h2>
+
+        <p class="lede">
+          The rest of this portfolio provides a more detailed view of my
+          development beyond individual projects — including what I am studying,
+          the experiments I conduct, certifications I have completed and the
+          scientific interests that shape my long-term direction.
+        </p>
+      </div>
+
+
+      <div class="grid grid-3">
+
+        <div class="card">
+
+          <h3>Learning log</h3>
+
+          <p>
+            What I'm studying right now across physics, mathematics, astronomy,
+            electronics and programming, including the concepts I am developing
+            independently alongside my formal ECE education.
+          </p>
+
+          <a href="learning.html" class="card-link">
+            View learning log →
+          </a>
+
+        </div>
+
+
+
+        <div class="card">
+
+          <h3>Certifications</h3>
+
+          <p>
+            Courses and certifications that support my technical and scientific
+            development, including Nuclear Astrophysics, Python Programming and
+            soft-skills coursework.
+          </p>
+
+          <a href="certifications.html" class="card-link">
+            View certifications →
+          </a>
+
+        </div>
 
       </div>
 
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+
+    <div class="wrap footer-grid">
+
+      <div>
+
+        <p>
+          Balakrishnan M. — ECE student, future astronomer.
+        </p>
+
+        <p class="footer-note">
+          Built with HTML, CSS &amp; JavaScript. ©
+          <span data-year></span>
+        </p>
+
+      </div>
+
+
+      <ul class="footer-links">
+
+        <li>
+          <a href="about.html">About</a>
+        </li>
+
+        <li>
+          <a href="projects.html">Projects</a>
+        </li>
+
+        <li>
+          <a href="resume.html">Resume</a>
+        </li>
+
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+
+      </ul>
+
     </div>
 
-  </section>
-
-</main>
-
-
-<footer class="site-footer">
-
-  <div class="wrap footer-grid">
-
-    <div>
-
-      <p>
-        Balakrishnan M. — ECE student, future astronomer.
-      </p>
-
-      <p class="footer-note">
-        Built with HTML, CSS &amp; JavaScript. ©
-        <span data-year></span>
-      </p>
-
-    </div>
-
-
-    <ul class="footer-links">
-
-      <li>
-        <a href="about.html">About</a>
-      </li>
-
-      <li>
-        <a href="projects.html">Projects</a>
-      </li>
-
-      <li>
-        <a href="resume.html">Resume</a>
-      </li>
-
-      <li>
-        <a href="contact.html">Contact</a>
-      </li>
-
-    </ul>
-
-  </div>
-
-</footer>
+  </footer>
 
 
 </body>
+
 </html>

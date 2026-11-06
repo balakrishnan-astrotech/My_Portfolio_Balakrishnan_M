@@ -15,6 +15,7 @@
   --teal:          #6FA9AC;
   --teal-soft:     #22343a;
   --red-dim:       #b06a5c;
+  --otline:        #fff224bd;
   --radius-s:      3px;
   --radius-m:      6px;
   --serif: 'Spectral', Georgia, 'Times New Roman', serif;
@@ -48,6 +49,7 @@ body{
   -webkit-font-smoothing:antialiased;
   text-align:justify;
 }
+
 
 /* =====================================================
    WELCOME SCREEN — COMPLETE ANIMATION
@@ -437,7 +439,7 @@ body::after{
   width:100%;
   height:1px;
   background:blue;
-  transition:1s ease-in-out;
+  transition:2s ease-in-out;
 }
 
 .brand.clicked::before{
@@ -457,6 +459,7 @@ body::after{
   gap:2px 4px;
   align-items:center;
   overflow:auto;
+  transition: 0.5s ease-in-out;
 }
 
 .nav-links a{
@@ -471,8 +474,6 @@ body::after{
 .nav-links a:hover{
   color:var(--text);
   background:var(--bg-raised);
-  border-right : 1px solid yellow;
-  padding-left: 20px;
 }
 
 .nav-links a.active{
@@ -488,6 +489,7 @@ body::after{
   padding:8px 12px;
   overflow:hidden;
   isolation:isolate;
+  z-index: 99;
 }
 
 .nav-toggle::before{
@@ -540,13 +542,12 @@ body::after{
   
 
   .nav-links{
-    display:none;
+    display:flex;
     position:absolute;
-    top:100%;
+    top:-1000%;
     left:0;
     right:0;
     background:var(--bg-panel);
-    border-bottom:1px solid var(--line-soft);
     flex-direction:column;
     align-items:stretch;
     padding:8px;
@@ -554,16 +555,27 @@ body::after{
     max-height:calc(100vh - 100px);
     max-height:calc(100dvh - 100px);
     overflow-y:auto;
+    transition: 0.5s top ease-in-out;
+    z-index: 88;
   }
 
   .nav-links.open{
-    display:flex;
+    top: 100%;
   }
 
+  .nav-links li{
+    padding: 5px 0px;
+  }
+  
   .nav-links a{
-    padding:12px 14px;
+    padding:8px 14px;
     border-radius:0;
-    border-bottom:1px solid var(--line-soft);
+  }
+
+  .nav-links a:hover{
+    border-right : 1px solid yellow;
+    padding-left: 30px;
+    transition: 0.2s ease-in-out;
   }
 }
 
@@ -665,6 +677,10 @@ body::after{
   display:flex;
   flex-direction:column;
   gap:10px;
+}
+
+.card:hover{
+  border-color: var(--otline);
 }
 
 .card h3{
@@ -1386,10 +1402,66 @@ canvas#starfield{
   white-space:nowrap;
 }
 
+
+/* Skills Page */
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.skill-number {
+  font-family: var(--mono);
+  color: var(--amber);
+  font-size: .78rem;
+}
+
+.skill-card h4,
+.skill-grid .card h4 {
+  color: var(--teal);
+  font-family: var(--mono);
+  font-size: .8rem;
+  margin: 12px 0 8px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.skill-tags span {
+  font-family: var(--mono);
+  font-size: .72rem;
+  color: var(--teal);
+  background: rgba(111,169,172,.08);
+  border: 1px solid var(--teal-soft);
+  padding: 5px 9px;
+  border-radius: 3px;
+}
+
+.skill-footer-note {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.skill-footer-note .btn-row {
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .skill-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
 /* =========================================================
    ADDITIONAL RESPONSIVE DESIGN
    Desktop | Laptop | Tablet
-   Append this section after all existing CSS.
    ========================================================= */
 
 
@@ -1806,54 +1878,11 @@ and (orientation:landscape){
 
 /* =========================================================
    9. RESPONSIVE CORRECTIONS
-   Added during optimisation. These only touch the specific
-   problems listed in the notes and sit last so they win over
-   earlier equal-specificity rules without needing !important.
    ========================================================= */
 
-/* Small phones (<= 600px): .profile-area had min-width:300px, which is wider
-   than the available column below ~393px viewport width. The tablet blocks
-   already reset it to 0 for 601–980px; this covers the remaining range. */
+/* Small phones (<= 600px): */
 @media screen and (max-width:600px){
   .profile-area{
     min-width:0;
   }
 }
-
-
-/* =========================================================
-   10. OPTIONAL FIXES — DISABLED BY DEFAULT
-   Both change how the site looks today, so they are left
-   commented out. To enable one, delete the two comment-marker
-   lines (the lone opening one and the lone closing one) that
-   wrap its code.
-   ========================================================= */
-
-/* 10a. Hide the "Menu" button on desktop (>= 981px).
-   Currently the button is visible beside the links on desktop even though
-   it does nothing there, because .nav-toggle has no default display:none. */
-/*
-@media screen and (min-width:981px){
-  .nav-toggle{
-    display:none;
-  }
-}
-*/
-
-/* 10b. Orbiting dot that follows the photo ring at every frame size.
-   Currently the dot uses fixed offsets (right:-100px; top:-247px;
-   transform-origin:-105px 107px), so it circles a point away from the photo
-   and extends beyond the viewport edge. This version rotates a ring-sized box
-   around its own centre, so it scales with .profile-photo-frame automatically. */
-/*
-.profile-photo-frame::after{
-  inset:-14px;
-  width:auto;
-  height:auto;
-  background:radial-gradient(circle at 50% 0, var(--amber) 0 4px, transparent 5px);
-  box-shadow:none;
-  border-radius:50%;
-  transform-origin:50% 50%;
-  filter:drop-shadow(0 0 6px var(--amber));
-}
-*/

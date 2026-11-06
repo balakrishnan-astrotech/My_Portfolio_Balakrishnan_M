@@ -6,7 +6,7 @@
    4. Starfield canvas
    5. Brand underline toggle
    ========================================================= */
-(function () {
+(function() {
   'use strict';
 
   var WELCOME_DELAY = 3000; /* ms — unchanged from the original timing */
@@ -38,9 +38,9 @@
       return;
     }
 
-    setTimeout(function () {
+    setTimeout(function() {
       welcome.classList.add('hide');
-      try { sessionStorage.setItem('welcomeSeen', '1'); } catch (e) {}
+      try { sessionStorage.setItem('welcomeSeen', '1'); } catch (e) { }
     }, WELCOME_DELAY);
   }
 
@@ -50,30 +50,30 @@
     var links = document.querySelector('.nav-links');
 
     if (toggle && links) {
-      var setOpen = function (open) {
+      var setOpen = function(open) {
         links.classList.toggle('open', open);
         toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-        if(toggle.textContent == "Menu"){
+        if (toggle.textContent == "Menu") {
           toggle.innerHTML = '<p class="crossmark">&times</p>';
         }
-        else{
+        else {
           toggle.innerHTML = "Menu";
         }
       };
 
-      toggle.addEventListener('click', function () {
+      toggle.addEventListener('click', function() {
         setOpen(!links.classList.contains('open'));
       });
 
       /* One delegated listener instead of one per link. */
-      links.addEventListener('click', function (e) {
+      links.addEventListener('click', function(e) {
         if (e.target.closest && e.target.closest('a')) setOpen(false);
       });
 
       /* Reset the menu state when the layout switches to desktop. */
       if (window.matchMedia) {
         var desktop = window.matchMedia('(min-width: 981px)');
-        var onChange = function (e) { if (e.matches) setOpen(false); };
+        var onChange = function(e) { if (e.matches) setOpen(false); };
         if (desktop.addEventListener) desktop.addEventListener('change', onChange);
         else if (desktop.addListener) desktop.addListener(onChange);
       }
@@ -84,9 +84,9 @@
     if (current) {
       var items = document.querySelectorAll('.nav-links a[data-page]');
       for (var i = 0; i < items.length; i++) {
-        if (items[i].getAttribute('data-page') === current) {
-          items[i].classList.add('active');
-          items[i].setAttribute('aria-current', 'page');
+        if (items[ i ].getAttribute('data-page') === current) {
+          items[ i ].classList.add('active');
+          items[ i ].setAttribute('aria-current', 'page');
         }
       }
     }
@@ -96,7 +96,7 @@
   function initYear() {
     var year = String(new Date().getFullYear());
     var els = document.querySelectorAll('[data-year]');
-    for (var i = 0; i < els.length; i++) els[i].textContent = year;
+    for (var i = 0; i < els.length; i++) els[ i ].textContent = year;
   }
 
   /* ---- 4. starfield ---- */
@@ -129,7 +129,7 @@
       var count = Math.floor((vw * vh) / 9000);
       stars = new Array(count);
       for (var i = 0; i < count; i++) {
-        stars[i] = {
+        stars[ i ] = {
           x: Math.random() * w,
           y: Math.random() * h,
           r: (Math.random() * 1.1 + 0.3) * dpr,
@@ -145,7 +145,7 @@
     function draw(t) {
       ctx.clearRect(0, 0, w, h);
       for (var i = 0; i < stars.length; i++) {
-        var s = stars[i];
+        var s = stars[ i ];
         var a = reduceMotion ? s.base : s.base + Math.sin(t * s.speed + s.phase) * 0.25;
         ctx.globalAlpha = a < 0 ? 0 : (a > 1 ? 1 : a);
         ctx.beginPath();
@@ -160,7 +160,7 @@
     }
 
     /* Debounced: regenerate the field once resizing settles, not on every event. */
-    window.addEventListener('resize', function () {
+    window.addEventListener('resize', function() {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(resize, 150);
     });
@@ -173,12 +173,12 @@
   function initBrand() {
     var brand = document.querySelector('.brand');
     if (!brand) return;
-    brand.addEventListener('click', function () {
+    brand.addEventListener('click', function() {
       brand.classList.toggle('clicked');
     });
   }
 
-  onReady(function () {
+  onReady(function() {
     safely(initWelcome);
     safely(initNav);
     safely(initYear);
