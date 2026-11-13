@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo App — Project | Balakrishnan M</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <meta name="description"
+    content="Celestial Gallery: an astronomy web application built with HTML, CSS and JavaScript, presenting curated celestial objects and information.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="projects">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="brand"><span class="brand-mark">&gt;</span> Balakrishnan M</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+      <ul class="nav-links" id="navlinks">
+        <li><a href="index.html" data-page="home">Home</a></li>
+        <li><a href="about.html" data-page="about">About</a></li>
+        <li><a href="skills.html" data-page="skills">Skills</a></li>
+        <li><a href="projects.html" data-page="projects">Projects</a></li>
+        <li><a href="internship.html" data-page="internship">Internship</a></li>
+        <li><a href="astronomy.html" data-page="astronomy">Astronomy</a></li>
+        <li><a href="certifications.html" data-page="certifications">Certifications</a></li>
+        <li><a href="achievements.html" data-page="achievements">Achievements</a></li>
+        <li><a href="contact.html" data-page="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero wrap">
+      <div class="crumb"><a href="projects.html">Projects</a> / ToDo App</div>
+      <span class="kicker">web development</span>
+      <h1>ToDo App</h1>
+      <p>A task management web application designed to help users organise daily activities, manage priorities, plan
+        tasks, and document their goals through a personalised task management system.</p>
+      <div class="tags" style="margin-top:14px;">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Firebase</span>
+        <span class="tag">Firestore</span>
+      </div>
+    </section>
+    <section class="section wrap">
+      <div class="placeholder" style="margin-bottom:44px;">
+        <img class="appcg-screen" src="images/todo-home.png" alt="ToDo App home page">
+      </div>
+
+      <div class="card">
+        <h3>Project overview</h3>
+        <p>ToDo App is a web-based task management application I developed to organise and manage personal activities
+          systematically. It provides features for creating and tracking tasks, setting priorities and dates, and
+          maintaining detailed task scripts. Firebase provides the backend infrastructure for user authentication and
+          cloud-based data storage.</p>
+      </div>
+
+      <div class="card">
+        <h3>Purpose</h3>
+        <p>I developed this project to explore how front-end development can be combined with backend services to create
+          a functional, data-driven application. My goal was to build a practical productivity tool while gaining
+          hands-on experience with JavaScript, Firebase Authentication, Cloud Firestore, and application architecture.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Technologies used</h3>
+        <div class="kv">
+          <div class="kv-row">
+            <dt>HTML</dt>
+            <dd>Structuring application pages, forms, navigation, and task management interfaces.</dd>
+          </div>
+          <div class="kv-row">
+            <dt>CSS</dt>
+            <dd>Designing responsive layouts, task cards, navigation components, and application styling.</dd>
+          </div>
+          <div class="kv-row">
+            <dt>JavaScript</dt>
+            <dd>Implementing application logic, interactive interfaces, task operations, and dynamic content handling.
+            </dd>
+          </div>
+          <div class="kv-row">
+            <dt>Firebase Authentication</dt>
+            <dd>Managing user registration, login, authentication, and account access.</dd>
+          </div>
+          <div class="kv-row">
+            <dt>Cloud Firestore</dt>
+            <dd>Storing and retrieving user-specific tasks and task scripts in a cloud database.</dd>
+          </div>
+          <div class="kv-row">
+            <dt>Firebase Hosting</dt>
+            <dd>Hosting and deploying the application, with GitHub Actions integration for automated deployment.</dd>
+          </div>
+          <div class="kv-row">
+            <dt>Git & GitHub</dt>
+            <dd>Version control, source-code management, and project development workflow.</dd>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Key features</h3>
+        <ul style="color:var(--text-muted);padding-left:18px;margin:0;">
+          <li>User registration, login, and authentication.</li>
+          <li>Task creation, updating, tracking, and deletion.</li>
+          <li>Task priorities and date-based organisation.</li>
+          <li>Task filtering and searching.</li>
+          <li>Task Script Pad for documenting plans, goals, and detailed task descriptions.</li>
+          <li>Cloud-based storage of user-specific tasks and scripts.</li>
+          <li>Settings and account management.</li>
+        </ul>
+      </div>
+
+      <div class="doc-section">
+  <h3>Screenshots / gallery</h3>
+  <div class="placeholder">
+    <img class="appcg-screen" src="images/todo_pages.gif" alt="ToDo App interface gif">
+  </div>
+      </div>
+
+      <div class="doc-section">
+        <h3>What I learned</h3>
+        <ul style="color:var(--text-muted);padding-left:18px;margin:0;">
+          <li>Developing a multi-page web application using HTML, CSS, and JavaScript.</li>
+          <li>Implementing user authentication and managing user-specific data with Firebase.</li>
+          <li>Understanding CRUD operations and cloud database integration using Cloud Firestore.</li>
+          <li>Organising JavaScript code and handling asynchronous operations.</li>
+          <li>Using Git and GitHub for version control and collaborative development workflows.</li>
+          <li>Deploying a web application through Firebase Hosting and GitHub Actions.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Future improvements</h3>
+        <div class="placeholder">
+          <span class="ph-icon">[ roadmap ]</span>
+          <span>
+            I plan to expand the application with additional productivity
+            features, improved task organisation, enhanced script management,
+            file attachment support, and further interface refinements.
+            Future updates will focus on improving reliability, usability,
+            and the overall task management experience.
+          </span>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <a href="https://todo-app-bk2026.web.app/" class="btn btn-outline">View ToDo App</a>
+        <a href="https://github.com/mbalakrishnan04032007-netizen/ToDo_App" class="btn btn-outline">View Source Code</a>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p>Balakrishnan M. — ECE student, future astronomer.</p>
+        <p class="footer-note">Built with HTML, CSS &amp; JavaScript. © <span data-year></span></p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

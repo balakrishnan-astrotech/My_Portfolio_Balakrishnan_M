@@ -54,7 +54,8 @@
         links.classList.toggle('open', open);
         toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
         if (toggle.textContent == "Menu") {
-          toggle.innerHTML = '<p class="crossmark">&times</p>';
+          toggle.innerHTML = `X`;
+          
         }
         else {
           toggle.innerHTML = "Menu";

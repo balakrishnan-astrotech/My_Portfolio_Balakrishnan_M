@@ -50,7 +50,6 @@ body{
   text-align:justify;
 }
 
-
 /* =====================================================
    WELCOME SCREEN — COMPLETE ANIMATION
    ===================================================== */
@@ -481,15 +480,19 @@ body::after{
 }
 
 .nav-toggle{
+  display: none;
   position:relative;
   border:1px solid transparent;
   border-radius:8px;
   background:#111;
   color:white;
-  padding:8px 12px;
+  padding: 6px 12px;
   overflow:hidden;
   isolation:isolate;
   z-index: 99;
+  font-size: 0.9rem;
+  font-family: var(--serif);
+  cursor: pointer;
 }
 
 .nav-toggle::before{
@@ -509,7 +512,7 @@ body::after{
 .nav-toggle::after{
   content:"";
   position:absolute;
-  inset:1px;
+  inset:2px;
   background:#111;
   border-radius:7px;
   z-index:-1;
@@ -522,18 +525,8 @@ body::after{
 }
 
 .nav-toggle:hover::after{
-  transform:scale(1.05);
+  transform:scale(1.03);
 }
-
-.crossmark{
-  font-size: 25px;
-  font-weight: 600;
-  color: red;
-  margin: -10px;
-  padding: 0px;
-  transition: 2s ease-in-out;
-}
-
 
 @media(max-width:980px){
   .nav-toggle{
@@ -572,11 +565,6 @@ body::after{
     border-radius:0;
   }
 
-  .nav-links a:hover{
-    border-right : 1px solid yellow;
-    padding-left: 30px;
-    transition: 0.2s ease-in-out;
-  }
 }
 
 /* ---------- buttons ---------- */
@@ -1206,6 +1194,13 @@ canvas#starfield{
   .profile-caption{
     margin-top:24px;
   }
+
+  .nav-links a:hover{
+    border-right : 1px solid yellow;
+    padding-left: 30px;
+    transition: 0.2s ease-in-out;
+  }
+
 }
 
 /* =========================================================
