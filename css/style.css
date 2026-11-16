@@ -567,6 +567,81 @@ body::after{
 
 }
 
+/* ---------- Moving Words ---------- */
+
+.moving-words {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+  background: #0d1528;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.moving-words::after{
+  content:"";
+  position:absolute;
+  inset:0px;
+  background:#fff041a6;
+  width: 1%;
+  height: 2px;
+  border-radius:1px;
+  left: -99%;
+  z-index:-1;
+  animation: hovertxt infinite;
+  animation-delay: 1s;
+  animation-duration: 8s;
+}
+
+@keyframes hovertxt{
+  to{
+    width: 500%;
+    left: 500%;
+  }
+}
+
+.moving-words .words-track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  height: 30px;
+  position: relative;
+  animation: marquee 35s linear infinite;
+  will-change: transform;
+}
+
+.moving-words .words-group {
+  display: flex;
+  flex: 0 0 auto;
+  width: max-content;
+  flex-wrap: nowrap;
+}
+
+.moving-words .words-group p {
+  all: unset;
+  display: block;
+  flex: 0 0 auto;
+  width: max-content;
+  box-sizing: content-box;
+  padding-right: 30px;
+  line-height: 30px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-1 * var(--marquee-distance)));
+  }
+}
+
+
 /* ---------- buttons ---------- */
 
 .btn{
@@ -1485,6 +1560,14 @@ canvas#starfield{
     gap:90px;
   }
 
+  .profile-area{
+    min-width:0;
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    transform: translateX(-50%, -50%);
+  }
+
   .profile-photo-frame{
     width:290px;
     height:290px;
@@ -1533,6 +1616,14 @@ canvas#starfield{
   .grid{
     gap:24px;
   }
+
+  .profile-area{
+    min-width:0;
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    transform: translateX(-50%, -50%);
+  }
 }
 
 
@@ -1579,7 +1670,12 @@ canvas#starfield{
 
   .profile-area{
     min-width:0;
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    transform: translateX(-50%, -50%);
   }
+
 
   .profile-photo-frame{
     width:250px;
@@ -1647,6 +1743,11 @@ canvas#starfield{
 
   .profile-area{
     min-width:0;
+    min-width:0;
+    position: absolute;
+    top: 30%;
+    left: 66%;
+    transform: translateX(-50%, -50%);
   }
 
   .profile-photo-frame{
